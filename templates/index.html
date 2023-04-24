@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{videos}}
+    {%for video in videos%}
+        <h2>{{video.title}}</h2>
+        <p>{{video.description}}</p>
+        <img src='{{video.poster.url}}' alt="">
+        <video src="{{video.video.url}}" controls></video>
+    {%endfor%}
+    {%for student in students%}
+        <div>
+            <h2>{{student.full_name}}</h2>
+            <p>{{student.age}}</p>
+            <img src="{{student.photo.url}}" alt="">
+        </div>
+    {%endfor%}
+</body>
+</html>

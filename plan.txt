@@ -1,0 +1,9 @@
+1 регистрация и пользователь в общем
+2 видео, лайки, дизлайки, подписки, отписки, коментарии и бан
+3 востонавление пароля через почту google, автогерация
+python -m venv venv 
+1 .\venv\Scripts\activate
+2 pip install django
+3 python manage.py runserver
+3 python manage.py makemigrations
+3 python manage.py migrate
