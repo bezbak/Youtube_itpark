@@ -1,5 +1,6 @@
 from django.contrib import admin
-from videos.models import Videos, Student
-# Register your models here.
-admin.site.register(Videos)
-admin.site.register(Student)
+from videos.models import Season, Serial, Series
+
+admin.site.register(Serial)
+admin.site.register(Season)
+admin.site.register(Series)

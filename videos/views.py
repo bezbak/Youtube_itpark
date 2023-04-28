@@ -1,14 +1,9 @@
 from django.shortcuts import render
-from videos.models import Videos, Student
+from videos.models import Serial
 # Create your views here.
 def index(request):
-    videos = Videos.objects.all()
-    students = Student.objects.all()
+    serial = Serial.objects.all()
     context = {
-        'videos':videos,
-        'students':students,
+        'serial':serial
     }
-    return render(request, 'index.html',context)
-
-def about_us(request):
-    return render(request, 'about_us.html')
+    return render(request, 'home.html',context)
