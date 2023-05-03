@@ -7,3 +7,10 @@ def index(request):
         'serial':serial
     }
     return render(request, 'home.html',context)
+
+def post_detail(request, id):
+    serial=Serial.objects.get(id=id)
+    context ={
+        'serial':serial
+    }
+    return render(request, 'video-post.html', context)

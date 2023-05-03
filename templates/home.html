@@ -387,8 +387,8 @@
 						{% for serial in serial %}
 							<div class="item">
 								<div class="progression-studios-video-index-container">
-									<a href="video-post.html">
-										<div class="progression-studios-video-feaured-image"><img src="{% static 'images/demo/spacex-530585-unsplash-700x480.jpg'%}" alt="Featured Image"></div>
+									<a href="{%url 'post_detail' serial.id%}">
+										<div class="progression-studios-video-feaured-image"><img src="{{serial.poster.url}}" alt="Featured Image"></div>
 								
 										<div class="progression-video-index-content">
 											<div class="progression-video-index-table">
