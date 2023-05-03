@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from videos.models import Serial
+from videos.models import Serial, Season
 # Create your views here.
 def index(request):
     serial = Serial.objects.all()
@@ -14,3 +14,10 @@ def post_detail(request, id):
         'serial':serial
     }
     return render(request, 'video-post.html', context)
+
+def season(request, id):
+    season = Season.objects.get(id=id)
+    context ={
+        'season':season
+    }
+    return render(request, 'video-seasons-post.html', context)

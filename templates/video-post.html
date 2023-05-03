@@ -4,7 +4,7 @@
 		<header id="masthead-pro" class="sticky-header"><!-- Remove sticky-header class to remove sticky header -->
 			<div class="header-container">
 				
-				<h1><a href="home.html"><img src="images/logo.png" alt="Logo"></a></h1>
+				<h1><a href="home.html"><img src="{% static 'images/logo.png'%}" alt="Logo"></a></h1>
 				
 				<nav id="site-navigation-pro">
 					<ul class="sf-menu">
@@ -48,7 +48,7 @@
 					
 				<div id="header-user-profile">
 					<div id="header-user-profile-click" class="noselect">
-						<img src="images/demo/user-profile.jpg" alt="Suzie">
+						<img src="{% static 'images/demo/user-profile.jpg'%}" alt="Suzie">
 						<div id="header-username">Jane Doe</div><i class="fas fa-angle-down"></i>
 					</div><!-- close #header-user-profile-click -->
 					<div id="header-user-profile-menu">
@@ -230,7 +230,7 @@
 			
 			<div style="display:none;">
 				<video id="Video-Vayvo-Single" poster="{{serial.poster.url}}" width="960" height="540" class="afterglow-lightboxplayer" data-autoresize="fit">
-					<source src="images/video/sample.mp4" type="video/mp4">
+					<source src="{% static 'images/video/sample.mp4'%}" type="video/mp4">
 				</video>
 			</div>
 			
@@ -273,8 +273,8 @@
 					<div id="video-post-buttons-container">
 						<a href="video-post.html#Video-Single"class="afterglow" id="video-post-play-text-btn"><i class="fas fa-play-circle"></i>Play</a>
 						<div style="display:none;">
-							<video id="Video-Single" poster="images/video/poster.jpg" width="960" height="540" class="afterglow-lightboxplayer" data-autoresize="fit">
-								<source src="images/video/sample.mp4" type="video/mp4">
+							<video id="Video-Single" poster="{% static 'images/video/poster.jpg'%}" width="960" height="540" class="afterglow-lightboxplayer" data-autoresize="fit">
+								<source src="{% static 'images/video/sample.mp4'%}" type="video/mp4">
 							</video>
 						</div>
 						
@@ -286,92 +286,16 @@
 					<div id="vayvo-video-post-content">
 						<p>{{serial.description}}</p>
 					</div><!-- #vayvo-video-post-content -->
-					
-					
-					<div id="video-more-like-this-details-section">
-						<h3 id="more-videos-heading">More Like This</h3>
-						
-						<div class="row">
-							
-							<div class="col col-12 col-md-6 col-lg-6">
-								<div class="progression-studios-video-index-container">
-									<a href="video-post.html#!">
-										<div class="progression-studios-video-feaured-image"><img src="images/demo/mohamed-ahsan-1195307-unsplash-700x480.jpg" alt="Featured Image"></div>
-							
-										<div class="progression-video-index-content">
-											<div class="progression-video-index-table">
-												<div class="progression-video-index-vertical-align">
-										
-													<h2 class="progression-video-title">Planet Earth</h2>
-										
-													<div class="average-rating-video-post">
-														<div class="average-rating-video-empty">
-															<span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span>
-														</div>
-														<div class="average-rating-overflow-width" style="width:70%;">
-															<div class="average-rating-video-filled">
-																<span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span>
-															<div class="clearfix"></div>
-															</div><!-- close .average-rating-video-filled -->
-														</div><!-- close .average-rating-overflow-width -->
-													</div><!-- close .average-rating-video-post -->
-													<div class="clearfix"></div>
-											
-													<ul class="video-index-meta-taxonomy"><li>Drama</li></ul>												
-													<div class="clearfix"></div>
-										
-												</div><!-- close .progression-video-index-vertical-align -->
-											</div><!-- close .progression-video-index-table -->
-										</div><!-- close .progression-video-index-content -->
-										<div class="video-index-border-hover"></div>
-								
-									</a>
-								</div><!-- close .progression-studios-video-index-container -->
-							</div><!-- close .col -->
-					
-							<div class="col col-12 col-md-6 col-lg-6">
-								<div class="progression-studios-video-index-container">
-									<a href="video-post.html#!">
-								
-										<div class="progression-studios-video-feaured-image"><img src="https://progression-studios.com/vayvo/images/demo/annie-spratt-1187424-unsplash-700x480.jpg" alt="Featured Image"></div>
-							
-										<div class="progression-video-index-content">
-											<div class="progression-video-index-table">
-												<div class="progression-video-index-vertical-align">
-										
-													<h2 class="progression-video-title">Polar Express</h2>
-										
-													<div class="average-rating-video-post">
-														<div class="average-rating-video-empty">
-															<span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span>
-														</div>
-														<div class="average-rating-overflow-width" style="width:90%;">
-															<div class="average-rating-video-filled">
-																<span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span>
-															<div class="clearfix"></div>
-															</div><!-- close .average-rating-video-filled -->
-														</div><!-- close .average-rating-overflow-width -->
-													</div><!-- close .average-rating-video-post -->
-													<div class="clearfix"></div>
-											
-													<ul class="video-index-meta-taxonomy"><li>Sci-fi</li></ul>												
-													<div class="clearfix"></div>
-										
-												</div><!-- close .progression-video-index-vertical-align -->
-											</div><!-- close .progression-video-index-table -->
-										</div><!-- close .progression-video-index-content -->
-										<div class="video-index-border-hover"></div>
-								
-									</a>
-								</div><!-- close .progression-studios-video-index-container -->
-							</div><!-- close .col -->
-							
-						</div><!-- close .row -->
-						
-						<div style="height:10px;"></div>
-
-					</div><!-- close #video-more-like-this-details-section -->
-
+					<div class="vayvo-progression-video-season-container">
+						<h2 class="video-post-heading-title">Сезоны:</h2>
+						<ul class="vayvo-progression-video-season-navigation">
+							{%for season in serial.serial.all%}
+							<li  class="current btn progression-title">
+								<a style="color: #FFF !important; font-size:24px;" href="{%url 'season' season.id%}">{{season.name}}</a>
+							</li>
+							{%endfor%}
+						</ul>
+					</div>
 				</div><!-- close #video-post-container -->
 				
 				
