@@ -1,19 +1,6 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;700&amp;family=Lato:wght@300;400;700&amp;display=swap">
-		
-		<link rel="stylesheet" href="icons/fontawesome/css/all.min.css"><!-- FontAwesome Icons -->
-		<link rel="stylesheet" href="icons/dashicons/css/dashicons-min.css"><!-- DashIcons For Star Ratings -->
-		
-		<title>Vayvo - Media Streaming &amp; Membership Site Template</title>
-	</head>
-	<body>
+{%extends 'homepage.html'%}
+{%load static%}
+{%block content%}
 		<header id="masthead-pro" class="sticky-header"><!-- Remove sticky-header class to remove sticky header -->
 			<div class="header-container">
 				
@@ -238,11 +225,11 @@
 		</header>
 		
 		
-		<div id="video-page-title-pro" style="background-image:url('images/demo/shutterstock_117660574-1700x900.jpg');">
+		<div id="video-page-title-pro" style="background-image:url('{{serial.poster.url}}');">
 			<a class="video-page-title-play-button afterglow" href="video-post.html#Video-Vayvo-Single"><i class="fas fa-play"></i></a>
 			
 			<div style="display:none;">
-				<video id="Video-Vayvo-Single" poster="images/video/poster.jpg" width="960" height="540" class="afterglow-lightboxplayer" data-autoresize="fit">
+				<video id="Video-Vayvo-Single" poster="{{serial.poster.url}}" width="960" height="540" class="afterglow-lightboxplayer" data-autoresize="fit">
 					<source src="images/video/sample.mp4" type="video/mp4">
 				</video>
 			</div>
@@ -258,7 +245,7 @@
 				
 				
 				<div id="video-post-container">
-					<h1 class="video-post-heading-title">Blue Surf</h1>
+					<h1 class="video-post-heading-title">{{serial.name}}</h1>
 					<div class="clearfix"></div>
 					
 					<ul id="video-post-meta-list">
@@ -297,7 +284,7 @@
 					</div><!-- close #video-post-buttons-container -->
 	
 					<div id="vayvo-video-post-content">
-						<p>Mae Holland (Emma Watson) seizes the opportunity of a lifetime when she lands a job with the world’s most powerful technology and social media company. Encouraged by the company’s founder (Tom Hanks), Mae joins a groundbreaking experiment that pushes the boundaries of privacy, ethics and personal freedom. Her participation in the experiment, and every decision she makes soon starts to affect the lives and futures of her friends, family and that of humanity.</p>
+						<p>{{serial.description}}</p>
 					</div><!-- #vayvo-video-post-content -->
 					
 					
@@ -541,22 +528,4 @@
 		    </div><!-- close .modal-content -->
 		  </div><!-- close .modal-dialog -->
 		</div><!-- close .modal -->
-		
-
-		<!-- Required Framework JavaScript -->
-		<script src="js/libs/jquery-3.5.1.min.js"></script><!-- jQuery -->
-		<script src="js/libs/popper.min.js" defer></script><!-- Bootstrap Popper/Extras JS -->
-		<script src="js/libs/bootstrap.min.js" defer></script><!-- Bootstrap Main JS -->
-		<!-- All JavaScript in Footer -->
-		
-		<!-- Additional Plugins and JavaScript -->
-		<script src="js/navigation.js" defer></script><!-- Header Navigation JS Plugin -->
-		<script src="js/jquery.flexslider-min.js" defer></script><!-- FlexSlider JS Plugin -->	
-		<script src="js/jquery-asRange.min.js" defer></script><!-- Range Slider JS Plugin -->
-		<script src="js/afterglow.min.js" defer></script><!-- Video Player JS Plugin -->
-		<script src="js/owl.carousel.min.js" defer></script><!-- Carousel JS Plugin -->
-		<script src="js/scripts.js" defer></script><!-- Custom Document Ready JS -->
-		
-		
-	</body>
-</html>
+{%endblock%}
