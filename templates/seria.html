@@ -225,17 +225,6 @@
 		</header>
 		
 		
-		<div id="video-page-title-pro" style="background-image:url('images/demo/markus-spiske-544020-unsplash-1700x900.jpg');">
-			<a class="video-page-title-play-button afterglow" href="video-seasons-post.html#Video-Vayvo-Single"><i class="fas fa-play"></i></a>
-			
-			<div style="display:none;">
-				<video id="Video-Vayvo-Single" width="960" height="540" data-youtube-id="jirBNu6mcWM"></video>
-			</div>
-			
-			<div id="video-page-title-gradient-base"></div>
-		</div><!-- close #video-page-title-pro -->
-		
-		
 		
 		<div id="content-pro">
 			
@@ -243,78 +232,22 @@
 				
 				
 				<div id="video-post-container">
-					<h1 class="video-post-heading-title">Grand Tour</h1>
+					<h1 class="video-post-heading-title">{{episode.id}}: {{episode.name}}</h1>
 					<div class="clearfix"></div>
 					
-					<ul id="video-post-meta-list">
-						<li><a href="video-seasons-post.html#!">Action</a></li>
-						<li id="video-post-meta-reviews">
-							<div class="average-rating-count-progression-studios">2 Reviews</div>
-								<div class="average-rating-video-post">
-									<div class="average-rating-video-empty">
-										<span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span><span class="dashicons dashicons-star-empty"></span>
-									</div>
-									<div class="average-rating-overflow-width" style="width:90%;">
-										<div class="average-rating-video-filled">
-											<span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span>
-										<div class="clearfix"></div>
-										</div><!-- close .average-rating-video-filled -->
-									</div><!-- close .average-rating-overflow-width -->
-								</div>
-							<div class="clearfix"></div>					
-						</li>
-						<li id="video-post-meta-year">2019</li>
-						<li id="video-post-meta-rating"><span>TV-MA</span></li>
-					</ul>
+					
 					<div class="clearfix"></div>
 
 					<div id="video-post-buttons-container">
-						<a href="video-seasons-post.html#Video-Single"class="afterglow" id="video-post-play-text-btn"><i class="fas fa-play"></i>Play</a>
-						<div style="display:none;">
-							<video id="Video-Single" width="960" height="540" data-youtube-id="jirBNu6mcWM"></video>
+						<div>
+							<video width="960" height="540" controls >
+                                <source src="{{episode.video.url}}">
+                            </video>
 						</div>
 						
-						<a href="video-seasons-post.html#!" class="wishlist-button-pro"><i class="fas fa-plus-circle"></i>Add to List</a>
-						<div id="video-social-sharing-button" class="btn"><i class="fas fa-share"></i>Share</div>
 					<div class="clearfix"></div>
 					</div><!-- close #video-post-buttons-container -->
 	
-					<div id="vayvo-video-post-content">
-						<p>The Tour de France is an annual men's multiple stage bicycle race primarily held in France, while also occasionally passing through nearby countries. Like the other Grand Tours, it consists of 21 day-long stages over the course of 23 days. The race was first organized in 1903 to increase sales for the newspaper.</p>
-					</div><!-- #vayvo-video-post-content -->
-					
-					
-				    <div class="vayvo-progression-video-season-container">
-                            <div class=".clearfix"></div>
-
-                            <ul class="progression-studios-episode-list-main">
-								{%for ep in season.season.all%}
-                                <li class="progression-studios-episode-list-item">
-                                    <div class="progression-episode-list-flex">
-
-                                        <div class="progression-studios-episode-right-container">
-                                            <div class="progression-episode-list-right-margin">
-                                                <a href="{%url 'series' ep.id%}" class="afterglow">
-                                                    <h2 class="progression-episode-list-title">{{ep.id}} {{ep.name}}</h2>
-                                                </a>
-                                                <ul class="progression-studios-episode-list-meta">
-                                                    <li class="progression-episode-season-meta-title">Season {{ep.season.name}}</li>
-                                                    <li class="progression-episode-list-meta-release-date">October 23, 2018</li>
-                                                </ul>
-                                            </div>
-                                            <!-- close .progression-episode-list-right-margin -->
-                                        </div>
-                                        <!-- close  .progression-studios-episode-right-container -->
-
-                                        <div class=".clearfix"></div>
-                                    </div>
-                                    <!-- close .progression-episode-list-flex -->
-                                </li>
-								{%endfor%}
-                            </ul>
-                            <div class=".clearfix"></div>
-                        </div><!-- close .vayvo-progression-video-season-container -->
-
 				</div><!-- close #video-post-container -->
 
 				<!-- close #video-post-sidebar -->
