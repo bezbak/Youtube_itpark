@@ -56,6 +56,9 @@ class Series(models.Model):
         related_name='season',
         on_delete=models.CASCADE
     )
+    created = models.DateTimeField(
+        auto_now_add=False
+    )
     def __str__(self):
         return self.name
     
