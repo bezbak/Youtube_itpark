@@ -249,11 +249,38 @@
 					</div><!-- close #video-post-buttons-container -->
 	
 				</div><!-- close #video-post-container -->
-
+                
 				<!-- close #video-post-sidebar -->
 				
 				
 				<div class="clearfix"></div>
+                <div class="vayvo-progression-video-season-container">
+                    <div class=".clearfix"></div>
+
+                    <ul class="progression-studios-episode-list-main" style="display:flex;">
+                        {%for ep in episode.season.season.all%}
+                        <li class="progression-studios-episode-list-item">
+                            <div class="progression-episode-list-flex">
+
+                                <div class="progression-studios-episode-right-container">
+                                    <div class="progression-episode-list-right-margin">
+                                        <a href="{%url 'series' ep.id%}" class="afterglow">
+                                            <h2 class="progression-episode-list-title">{{ep.id}}</h2>
+                                        </a>
+                                    </div>
+                                    <!-- close .progression-episode-list-right-margin -->
+                                </div>
+                                <!-- close  .progression-studios-episode-right-container -->
+
+                                <div class=".clearfix"></div>
+                            </div>
+                            <!-- close .progression-episode-list-flex -->
+                        </li>
+                        {%endfor%}
+                    </ul>
+                    <div class=".clearfix"></div>
+                </div><!-- close .vayvo-progression-video-season-container -->
+
 			</div><!-- close .container -->
 			
 			
